@@ -1,0 +1,20 @@
+  <div class="login-container" *ngIf="formLogin" [formGroup]="formLogin">
+    <img src="./assets/Axity.png" alt="logo">
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="algo@exmple.com" formControlName="email">
+        <mat-error *ngIf="formLogin.get('email')?.hasError('required')">Username is required</mat-error>
+        <mat-error *ngIf="formLogin.get('email')?.hasError('email')">The field must be a mail</mat-error>
+    </mat-form-field> 
+    <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="******" formControlName="password" >
+        <mat-error *ngIf="formLogin.get('password')?.hasError('required')">The field password is required</mat-error>
+    </mat-form-field> 
+    <button 
+        mat-raised-button 
+        color="primary" 
+        [disabled]="formLogin.invalid || isLoading"
+        (click)="loginClick()">Loggin
+    </button>
+  </div>

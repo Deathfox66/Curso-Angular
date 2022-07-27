@@ -1,0 +1,32 @@
+{
+  "videogames": [
+    {
+      "id": 1,
+      "name": "Chrono Trigger",
+      "plattform": "Snes",
+      "release": "11/03/1995",
+      "mode": "single player"
+    },
+    {
+      "name": "Zelda A Link To The Past",
+      "plattform": "Snes",
+      "release": "21/11/1991",
+      "mode": "Single player ",
+      "id": 3
+    },
+    {
+      "name": "Metroid Zero Mission ",
+      "plattform": "Game Boy Advance/Sp",
+      "release": "2004-04-08",
+      "mode": "single player",
+      "id": 4
+    },
+    {
+      "name": "Zelda Minish Cap",
+      "plattform": "Game Boy Advance/Sp",
+      "release": "2010-03-12",
+      "mode": "single player",
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<button mat-raised-button color="primary" class="algo" (click)="conta()">New Contact</button>
+<button mat-icon-button (click)="returnPage()" class="returnP">
+    <mat-icon>keyboard_backspace</mat-icon>
+</button>
+<table mat-table [dataSource]="dataContacts" class="mat-elevationz8">
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>No.</th>
+        <td mat-cell *matCellDef="let element">{{element.id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{element.name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="last_name">
+        <th mat-header-cell *matHeaderCellDef>Last Name</th>
+        <td mat-cell *matCellDef="let element">{{element.last_name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="phone_number">
+        <th mat-header-cell *matHeaderCellDef>Phone Number</th>
+        <td mat-cell *matCellDef="let element">{{element.phone_number}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="avatar">
+        <th mat-header-cell *matHeaderCellDef>Gender</th>
+        <td mat-cell  *matCellDef="let element">{{element.avatar}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-icon-button [routerLink]="'contacts/' + element.id">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-icon-button (click)="deleteItem(element)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+
+    <ng-container  matColumnDef="gender">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+            <mat-icon>face_6</mat-icon>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

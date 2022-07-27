@@ -1,0 +1,25 @@
+{
+  "contacts": [
+    {
+      "name": "Cesar",
+      "last_name": "Villagran",
+      "phone_number": 5563192410,
+      "avatar": "Male",
+      "id": 1
+    },
+    {
+      "name": "Rebeca",
+      "last_name": "Quijano",
+      "phone_number": 5534576235,
+      "avatar": "",
+      "id": 2
+    },
+    {
+      "name": "Cesar",
+      "last_name": "Villagran",
+      "phone_number": 5563192410,
+      "avatar": "Male",
+      "id": 3
+    }
+  ]
+}

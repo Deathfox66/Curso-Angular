@@ -1,0 +1,27 @@
+<button mat-icon-button (click)="returnPage()" class="returnP">
+    <mat-icon>keyboard_backspace</mat-icon>
+</button>
+<div class="videogamecontainer" *ngIf="formVideogames" [formGroup] = "formVideogames">
+    <h1>{{title}}</h1>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Plattform</mat-label>
+        <input matInput formControlName="plattform"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Release</mat-label>
+        <input type="date" matInput formControlName="release"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Mode</mat-label>
+        <input  matInput formControlName="mode"/>
+    </mat-form-field>
+    <button mat-raised-button color="primary"[disabled]="formVideogames.invalid" (click)="save()">Save</button>
+</div>

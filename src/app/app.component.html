@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <span>Angular Course</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="logout()" *ngIf="isLogged">
+        <mat-icon>logout</mat-icon>
+    </button>
+    <span class="material-symbols-outlined"></span>
+</mat-toolbar>
+<mat-progress-bar mode="buffer" *ngIf="isLoading"></mat-progress-bar>
+<router-outlet></router-outlet>
